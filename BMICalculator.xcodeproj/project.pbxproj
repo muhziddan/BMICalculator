@@ -58,13 +58,37 @@
 			children = (
 				8F069D10282A1C3700155D9C /* AppDelegate.swift */,
 				8F069D12282A1C3700155D9C /* SceneDelegate.swift */,
-				8F069D14282A1C3700155D9C /* ViewController.swift */,
-				8F069D16282A1C3700155D9C /* Main.storyboard */,
+				8F069D24282A1E0500155D9C /* Model */,
+				8F069D25282A1E1A00155D9C /* Controller */,
+				8F069D26282A1E2600155D9C /* View */,
 				8F069D19282A1C3700155D9C /* Assets.xcassets */,
 				8F069D1B282A1C3700155D9C /* LaunchScreen.storyboard */,
 				8F069D1E282A1C3700155D9C /* Info.plist */,
 			);
 			path = BMICalculator;
+			sourceTree = "<group>";
+		};
+		8F069D24282A1E0500155D9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F069D25282A1E1A00155D9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F069D14282A1C3700155D9C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8F069D26282A1E2600155D9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8F069D16282A1C3700155D9C /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
