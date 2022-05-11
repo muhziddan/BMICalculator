@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculateViewController.swift
 //  BMICalculator
 //
 //  Created by Muhammad Ziddan Hidayatullah on 10/05/22.
@@ -7,12 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculateViewController: UIViewController {
 
     @IBOutlet weak var heightValueLabel: UILabel!
     @IBOutlet weak var weightValueLabel: UILabel!
     @IBOutlet weak var heightSlider: UISlider!
     @IBOutlet weak var weightSlider: UISlider!
+    
+    var bmiResult: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,17 @@ class ViewController: UIViewController {
         let weight = round(weightSlider.value)
         
         let bmi = round(weight / pow(height, 2) * 10) / 10.0
+        bmiResult = String(bmi)
         
         print(bmi)
+        
+        performSegue(withIdentifier: "goToResultVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResultVC" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.bmiValue = bmiResult
+        }
     }
 }

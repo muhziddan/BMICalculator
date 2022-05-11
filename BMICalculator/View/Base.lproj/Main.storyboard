@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,21 +132,22 @@
                         <outlet property="heightValueLabel" destination="99i-Q1-ZFY" id="2Ka-PT-Xlr"/>
                         <outlet property="weightSlider" destination="Sl0-YY-rk1" id="eN4-Qf-Q1B"/>
                         <outlet property="weightValueLabel" destination="Wpt-0W-f57" id="Onh-4N-xih"/>
+                        <segue destination="TOp-e8-USG" kind="presentation" identifier="goToResultVC" modalPresentationStyle="fullScreen" id="Hca-oo-Yt3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="199" y="86"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="F3D-9N-lT4">
             <objects>
-                <viewController id="TOp-e8-USG" customClass="ViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TOp-e8-USG" customClass="ResultViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="COX-pI-CKg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="3Il-Z6-XVj" userLabel="Result Background Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="75T-Z5-66O">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-Q4-gGa" userLabel="Result Stack View">
@@ -188,26 +189,34 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="TOp-e8-USG" eventType="touchUpInside" id="4Fo-RY-M2K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gE5-HG-1uw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3Il-Z6-XVj" secondAttribute="bottom" id="3VN-pq-gy3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v8g-0h-Wml" secondAttribute="trailing" id="P82-zd-s17"/>
-                            <constraint firstAttribute="trailing" secondItem="3Il-Z6-XVj" secondAttribute="trailing" id="QtH-ZZ-Vhw"/>
+                            <constraint firstItem="v8g-0h-Wml" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leadingMargin" id="AAH-nO-1N3"/>
+                            <constraint firstItem="75T-Z5-66O" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leading" id="DIa-Q2-ghP"/>
+                            <constraint firstAttribute="bottom" secondItem="75T-Z5-66O" secondAttribute="bottom" id="Glx-kJ-DHm"/>
+                            <constraint firstAttribute="trailing" secondItem="75T-Z5-66O" secondAttribute="trailing" id="MYj-t2-UWB"/>
                             <constraint firstItem="gE5-HG-1uw" firstAttribute="bottom" secondItem="v8g-0h-Wml" secondAttribute="bottom" id="SPM-Ri-rAB"/>
+                            <constraint firstItem="75T-Z5-66O" firstAttribute="top" secondItem="COX-pI-CKg" secondAttribute="top" id="cui-z4-0MH"/>
                             <constraint firstItem="vvj-Q4-gGa" firstAttribute="centerY" secondItem="COX-pI-CKg" secondAttribute="centerY" id="dUd-nc-EkW"/>
-                            <constraint firstItem="3Il-Z6-XVj" firstAttribute="top" secondItem="COX-pI-CKg" secondAttribute="top" id="mtc-oe-Yev"/>
-                            <constraint firstItem="v8g-0h-Wml" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leadingMargin" id="p8H-fU-V1E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v8g-0h-Wml" secondAttribute="trailing" id="lgv-zx-aFm"/>
                             <constraint firstItem="vvj-Q4-gGa" firstAttribute="centerX" secondItem="COX-pI-CKg" secondAttribute="centerX" id="qlY-hx-2Pb"/>
-                            <constraint firstItem="3Il-Z6-XVj" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leading" id="wtw-Dr-8vR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Aa0-E8-PPE"/>
+                    <connections>
+                        <outlet property="suggestionLabel" destination="InG-ON-giE" id="0AM-Jn-KVr"/>
+                        <outlet property="valueLabel" destination="kUn-S7-CQt" id="ysK-3E-o3Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFR-FO-u6M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="86"/>
+            <point key="canvasLocation" x="931.88405797101461" y="85.714285714285708"/>
         </scene>
     </scenes>
     <resources>
