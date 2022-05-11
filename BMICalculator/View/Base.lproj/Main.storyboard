@@ -151,22 +151,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-Q4-gGa" userLabel="Result Stack View">
-                                <rect key="frame" x="91" y="351.5" width="232" height="193.5"/>
+                                <rect key="frame" x="20" y="351.5" width="374" height="193.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DW-kG-OKV" userLabel="Result Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="232" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUn-S7-CQt" userLabel="Value Label">
-                                        <rect key="frame" x="0.0" y="52" width="232" height="95.5"/>
+                                        <rect key="frame" x="0.0" y="52" width="374" height="95.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="InG-ON-giE" userLabel="Suggestion Label">
-                                        <rect key="frame" x="0.0" y="157.5" width="232" height="36"/>
+                                        <rect key="frame" x="0.0" y="157.5" width="374" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -197,15 +197,16 @@
                         <viewLayoutGuide key="safeArea" id="gE5-HG-1uw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vvj-Q4-gGa" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leadingMargin" id="1sX-Yj-rqy"/>
                             <constraint firstItem="v8g-0h-Wml" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leadingMargin" id="AAH-nO-1N3"/>
                             <constraint firstItem="75T-Z5-66O" firstAttribute="leading" secondItem="COX-pI-CKg" secondAttribute="leading" id="DIa-Q2-ghP"/>
                             <constraint firstAttribute="bottom" secondItem="75T-Z5-66O" secondAttribute="bottom" id="Glx-kJ-DHm"/>
                             <constraint firstAttribute="trailing" secondItem="75T-Z5-66O" secondAttribute="trailing" id="MYj-t2-UWB"/>
                             <constraint firstItem="gE5-HG-1uw" firstAttribute="bottom" secondItem="v8g-0h-Wml" secondAttribute="bottom" id="SPM-Ri-rAB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vvj-Q4-gGa" secondAttribute="trailing" id="bUl-Wq-rVn"/>
                             <constraint firstItem="75T-Z5-66O" firstAttribute="top" secondItem="COX-pI-CKg" secondAttribute="top" id="cui-z4-0MH"/>
                             <constraint firstItem="vvj-Q4-gGa" firstAttribute="centerY" secondItem="COX-pI-CKg" secondAttribute="centerY" id="dUd-nc-EkW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v8g-0h-Wml" secondAttribute="trailing" id="lgv-zx-aFm"/>
-                            <constraint firstItem="vvj-Q4-gGa" firstAttribute="centerX" secondItem="COX-pI-CKg" secondAttribute="centerX" id="qlY-hx-2Pb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Aa0-E8-PPE"/>
