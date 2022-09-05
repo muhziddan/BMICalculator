@@ -12,7 +12,6 @@ class ResultViewController: UIViewController {
     var bmiValue: String?
     var suggestion: String?
     var color: UIColor?
-//    var calculator = Calculator()
     
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var suggestionLabel: UILabel!
