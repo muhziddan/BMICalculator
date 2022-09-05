@@ -29,6 +29,6 @@ class ResultViewController: UIViewController {
     func updateUI() {
         valueLabel.text = bmiValue
         suggestionLabel.text = suggestion
-        self.view.backgroundColor = color
+        view.backgroundColor = color
     }
 }
