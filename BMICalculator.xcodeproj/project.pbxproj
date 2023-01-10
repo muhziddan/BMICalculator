@@ -16,7 +16,18 @@
 		8F39D34F282B90C1000B77DA /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39D34E282B90C1000B77DA /* Calculator.swift */; };
 		8F39D364282BB5CF000B77DA /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F39D363282BB5CF000B77DA /* CalculatorModel.swift */; };
 		8F5FFFD8282B6EDF0043A3DC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5FFFD7282B6EDF0043A3DC /* ResultViewController.swift */; };
+		8F8B3A16296E261E006BB31F /* BMICalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B3A15296E261E006BB31F /* BMICalculatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F8B3A17296E261E006BB31F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F069D05282A1C3700155D9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F069D0C282A1C3700155D9C;
+			remoteInfo = BMICalculator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8F069D0D282A1C3700155D9C /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +41,19 @@
 		8F39D34E282B90C1000B77DA /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		8F39D363282BB5CF000B77DA /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		8F5FFFD7282B6EDF0043A3DC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		8F8B3A13296E261E006BB31F /* BMICalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMICalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F8B3A15296E261E006BB31F /* BMICalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8F069D0A282A1C3700155D9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8B3A10296E261E006BB31F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				8F069D0F282A1C3700155D9C /* BMICalculator */,
+				8F8B3A14296E261E006BB31F /* BMICalculatorTests */,
 				8F069D0E282A1C3700155D9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8F069D0D282A1C3700155D9C /* BMICalculator.app */,
+				8F8B3A13296E261E006BB31F /* BMICalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +122,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8F8B3A14296E261E006BB31F /* BMICalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B3A15296E261E006BB31F /* BMICalculatorTests.swift */,
+			);
+			path = BMICalculatorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +150,24 @@
 			productReference = 8F069D0D282A1C3700155D9C /* BMICalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8F8B3A12296E261E006BB31F /* BMICalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F8B3A1B296E261E006BB31F /* Build configuration list for PBXNativeTarget "BMICalculatorTests" */;
+			buildPhases = (
+				8F8B3A0F296E261E006BB31F /* Sources */,
+				8F8B3A10296E261E006BB31F /* Frameworks */,
+				8F8B3A11296E261E006BB31F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F8B3A18296E261E006BB31F /* PBXTargetDependency */,
+			);
+			name = BMICalculatorTests;
+			productName = BMICalculatorTests;
+			productReference = 8F8B3A13296E261E006BB31F /* BMICalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -127,11 +175,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					8F069D0C282A1C3700155D9C = {
 						CreatedOnToolsVersion = 13.3.1;
+					};
+					8F8B3A12296E261E006BB31F = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8F069D0C282A1C3700155D9C;
 					};
 				};
 			};
@@ -149,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				8F069D0C282A1C3700155D9C /* BMICalculator */,
+				8F8B3A12296E261E006BB31F /* BMICalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -161,6 +214,13 @@
 				8F069D1D282A1C3700155D9C /* LaunchScreen.storyboard in Resources */,
 				8F069D1A282A1C3700155D9C /* Assets.xcassets in Resources */,
 				8F069D18282A1C3700155D9C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F8B3A11296E261E006BB31F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +240,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8F8B3A0F296E261E006BB31F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F8B3A16296E261E006BB31F /* BMICalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F8B3A18296E261E006BB31F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F069D0C282A1C3700155D9C /* BMICalculator */;
+			targetProxy = 8F8B3A17296E261E006BB31F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F069D16282A1C3700155D9C /* Main.storyboard */ = {
@@ -376,6 +452,52 @@
 			};
 			name = Release;
 		};
+		8F8B3A19296E261E006BB31F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67Y666X7TJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziddan.BMICalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMICalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BMICalculator";
+			};
+			name = Debug;
+		};
+		8F8B3A1A296E261E006BB31F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67Y666X7TJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ziddan.BMICalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMICalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BMICalculator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +515,15 @@
 			buildConfigurations = (
 				8F069D22282A1C3700155D9C /* Debug */,
 				8F069D23282A1C3700155D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F8B3A1B296E261E006BB31F /* Build configuration list for PBXNativeTarget "BMICalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F8B3A19296E261E006BB31F /* Debug */,
+				8F8B3A1A296E261E006BB31F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
