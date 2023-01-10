@@ -39,4 +39,6 @@ struct Calculator {
     func getColor() -> UIColor {
         return bmi?.color ?? .white
     }
+    
+    // add comments to trigger webhook
 }
