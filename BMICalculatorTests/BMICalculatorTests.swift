@@ -31,5 +31,10 @@ final class BMICalculatorTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testConversionForTwo() {
+//      let result = converter.convert(2)
+//      XCTAssertEqual(result, "II", "Conversion for 2 is incorrect")
+    }
 
 }
