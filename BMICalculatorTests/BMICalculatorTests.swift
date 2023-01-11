@@ -32,9 +32,10 @@ final class BMICalculatorTests: XCTestCase {
         }
     }
     
-    // add comments to trigger webhook
-    // test enabling ssl webhook
-    // close ngrok
+    // add comments to trigger webhook -> done
+    // test enabling ssl webhook -> done
+    // close ngrok -> it will not trigger because the session is closed and url will be changed for the next session
+    // test email notification
     func testConversionForTwo() {
 //      let result = converter.convert(2)
 //      XCTAssertEqual(result, "II", "Conversion for 2 is incorrect")
