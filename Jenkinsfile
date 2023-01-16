@@ -10,26 +10,38 @@ pipeline {
             }
         }
         
-        stage('JUnit') {
+        stage('Build') {
             steps {
-                echo "JUnit passed";
+              echo "Start Building";
+              xcodebuild /
+                -project BMICalculator.xcodeproj /
+                -scheme BMICalculator /
+                -configuration Debug build /
+                -destination 'platform=iOS Simulator,name=iPhone 14'
             }
         }
         
-        stage('Quality-Gate') {
+        stage('Unit testing') {
             steps {
-                echo "sonarqube quality gate passed";
-                /*sh exit ("1");*/
+              echo "start unit testing";
+              xcodebuild /
+                -project BMICalculator.xcodeproj /
+                -scheme BMICalculator /
+                -configuration Debug test /
+                -destination 'platform=iOS Simulator,name=iPhone 14'
+              /*sh exit ("1");*/
             }
         }
         
+        /*
         stage('Deploy') {
             steps {
                 echo "passed";
             }
         }
+        */
     }
-    
+    /*
     post {
         always {
             echo "this will always run"
@@ -48,4 +60,5 @@ pipeline {
             echo "for example if pipeline was previously failing but now successful"
         }
     }
+  */
 }
