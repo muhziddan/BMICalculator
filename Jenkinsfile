@@ -20,7 +20,7 @@ pipeline {
     stage('Unit testing') {
       steps {
         echo "start unit testing";
-        sh "xcodebuild -project BMICalculator.xcodeproj -scheme BMICalculator -configuration Debug test -destination 'platform=iOS Simulator,name=iPhone 14'"
+        sh "xcodebuild -project BMICalculator.xcodeproj -scheme BMICalculator -configuration Debug build test -destination 'platform=iOS Simulator,name=iPhone 14'"
       }
     }
     
