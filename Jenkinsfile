@@ -10,9 +10,9 @@ pipeline {
       }
     }
         
-    stage('Build and unit test') {
+    stage('Build') {
       steps {
-        echo "Start Building";
+        echo "Start Building app";
         sh "xcodebuild -project BMICalculator.xcodeproj -scheme BMICalculator -configuration Debug build -destination 'platform=iOS Simulator,name=iPhone 14'"
       }
     }
