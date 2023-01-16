@@ -13,22 +13,14 @@ pipeline {
     stage('Build') {
       steps {
         echo "Start Building";
-        xcodebuild \
-          -project BMICalculator.xcodeproj \
-          -scheme BMICalculator \
-          -configuration Debug build \
-          -destination 'platform=iOS Simulator,name=iPhone 14'
+        xcodebuild -project BMICalculator.xcodeproj -scheme BMICalculator -configuration Debug build -destination 'platform=iOS Simulator,name=iPhone 14'
       }
     }
         
     stage('Unit testing') {
       steps {
         echo "start unit testing";
-        xcodebuild \
-          -project BMICalculator.xcodeproj \
-          -scheme BMICalculator \
-          -configuration Debug test \
-          -destination 'platform=iOS Simulator,name=iPhone 14'
+        xcodebuild -project BMICalculator.xcodeproj -scheme BMICalculator -configuration Debug test -destination 'platform=iOS Simulator,name=iPhone 14'
       }
     }
     
